@@ -1,0 +1,40 @@
+{
+  "name": "streamvault",
+  "version": "1.0.0",
+  "description": "Premium orange-and-black full-stack video streaming platform with Firebase, Node.js, Express, and multi-provider payments.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "check": "node --check src/server.js && node --check src/config/firebaseAdmin.js && node --check src/middleware/auth.js && node --check src/middleware/errorHandler.js && node --check src/routes/admin.js && node --check src/routes/announcements.js && node --check src/routes/auth.js && node --check src/routes/categories.js && node --check src/routes/payments.js && node --check src/routes/plans.js && node --check src/routes/users.js && node --check src/routes/videos.js && node --check src/utils/validators.js && node --check public/js/app.js && node --check public/js/api.js && node --check public/js/firebase-config.js",
+    "test": "npm run check"
+  },
+  "keywords": [
+    "streaming",
+    "firebase",
+    "express",
+    "stripe",
+    "razorpay",
+    "paypal"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "firebase-admin": "^13.0.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "razorpay": "^2.9.5",
+    "stripe": "^17.5.0",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
