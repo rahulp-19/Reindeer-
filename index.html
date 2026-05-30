@@ -3,63 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reindeer Construction | Jorhat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#064e3b', // emerald-900
-              secondary: '#111827', // gray-900
-              accent: '#f59e0b', // amber-500
-              light: '#f8fafc', // slate-50
-            },
-            fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
-              display: ['Outfit', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #064e3b;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #042f2e;
-      }
-      body {
-        background-color: #f8fafc;
-        overflow-x: hidden;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <meta name="theme-color" content="#0d0d0d" />
+    <meta name="description" content="StreamVault is a premium orange and black cinematic video streaming platform." />
+    <title>StreamVault | Premium Video Streaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
   <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="nav-shell">
+      <a class="brand" href="#/home"><span class="brand-mark">SV</span><span>StreamVault</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="#/home">Home</a><a href="#/categories">Categories</a><a href="#/search">Search</a><a href="#/plans">Plans</a><a href="#/announcements">Announcements</a><a href="#/dashboard" data-auth-link>Dashboard</a><a href="#/admin" data-admin-link>Admin</a>
+      </nav>
+      <div class="nav-actions"><a class="btn ghost" href="#/login" data-guest>Login</a><a class="btn primary" href="#/register" data-guest>Start Free</a><button class="btn ghost hidden" data-logout>Logout</button></div>
+    </header>
+    <main id="app"></main>
+    <footer class="footer"><p>© <span id="year"></span> StreamVault. All rights reserved.</p><a href="#/terms">Terms & Conditions</a><a href="#/privacy">Privacy Policy</a><a href="mailto:support@streamvault.example">Contact Support</a></footer>
+    <template id="card-template"><article class="video-card"><div class="thumb"><img alt=""><span class="badge"></span><button class="play">▶</button></div><div class="video-meta"><p class="eyebrow"></p><h3></h3><p class="muted"></p></div></article></template>
+    <script type="module" src="/js/app.js"></script>
+  </body>
 </html>
